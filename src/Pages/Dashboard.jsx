@@ -1,7 +1,7 @@
 import React from 'react'
 import Cookies from 'js-cookie'
 import AuthApi from '../AuthApi';
-import { Grid, Image, Menu, Icon, Header, List, Input } from 'semantic-ui-react'
+import { Grid, Menu, Icon, Header, List, Input } from 'semantic-ui-react'
 import { getRequest, getToken } from '../Components/funtions';
 
 function Dashboard() {
@@ -46,9 +46,7 @@ function Dashboard() {
       return res.json()
     })
     .then(json => {  
-      console.log(json)
-      // this.setState({all_videos: json.data})
-      // console.log('videos 1' ,  json)
+      console.log(json) 
     })
     .catch(err => {
       // console.log(err) 

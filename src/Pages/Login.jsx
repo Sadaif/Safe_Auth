@@ -2,7 +2,7 @@ import React from 'react'
 import Cookies from 'js-cookie'
 import AuthApi from '../AuthApi';
 import { postJSON } from '../Components/funtions';
-import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
+import { Button, Form, Grid } from 'semantic-ui-react'
 
 function Login() {
   const [email, setEmail] = React.useState('')
@@ -37,16 +37,7 @@ function Login() {
         
       })
   }
-  return (
-    // <div style={{backgroundColor: '#eee' , height: '90vh' , paddingTop: '40px'}}>
-    //   <h1> Welcome </h1>
-    //   <form onSubmit={postData}>
-    //     <input name="email" value={email} placeholder="email" type="text" onChange={e => setEmail(e.target.value)} />
-    //     <input name="password" value={password} placeholder="password" type="password" onChange={e => setPassword(e.target.value)} />
-    //     <input type="submit" value="Login" />
-    //   </form>
-
-    // </div>
+  return ( 
     <Grid textAlign='center' style={{ height: '100vh', backgroundColor: '#eee' }} verticalAlign='middle'>
       <Grid.Column style={{ maxWidth: 350 }}>
         <p   textAlign='center'>
@@ -54,8 +45,7 @@ function Login() {
       </p>
       {error ? <div className="alert alert-warning">{error}</div> : null}
       
-        <Form size='large'  onSubmit={postData}>
-          {/* <Segment stacked> */}
+        <Form size='large'  onSubmit={postData}> 
           <Form.Input
             fluid
             name="email" value={email}  type="text" onChange={e => setEmail(e.target.value)} 
@@ -70,8 +60,7 @@ function Login() {
 
           <Button color='blue' fluid size='big' type="submit">
             Submit
-          </Button>
-          {/* </Segment> */}
+          </Button> 
         </Form>
         <br />
         <Button style={{backgroundColor: '#5bc0de' , color: 'white'}} fluid size='large'>

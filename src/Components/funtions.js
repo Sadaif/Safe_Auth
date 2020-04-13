@@ -2,22 +2,7 @@ import React from 'react';
 export function API_URL(url){
   return "https://towel.42one.com/api"  + url
 } 
-
-// export var ACCESS_TOKEN = "";
-// export var REFRESH_TOKEN = "";
-
-// export function saveToken(tokens) {
-//   localStorage.setItem(USER_KEY, JSON.stringify(tokens));
-// }
-
-// export function saveRefreshToken() {
-//   return JSON.parse(localStorage.getItem(USER_KEY));
-// }
-
-// export function deleteUser() {
-//   localStorage.removeItem(USER_KEY);
-// }
-
+ 
 
 function parseJwt(token) {
   if (!token) { return; }
